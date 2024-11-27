@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios MEINTEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Servicios de Soporte de Software "MEINTEC"</h1>
+        <p>Soluciones rápidas y confiables para tu software.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Servicios Disponibles</h2>
+            <form id="orderForm">
+                <div class="service">
+                    <label>
+                        <input type="checkbox" name="service" value="Mantenimiento General - 50">
+                        Mantenimiento General - $50
+                    </label>
+                </div>
+                <div class="service">
+                    <label>
+                        <input type="checkbox" name="service" value="Instalación de Software - 30">
+                        Instalación de Software - $30
+                    </label>
+                </div>
+                <div class="service">
+                    <label>
+                        <input type="checkbox" name="service" value="Resolución de Problemas - 40">
+                        Resolución de Problemas - $40
+                    </label>
+                </div>
+                <div class="service">
+                    <label>
+                        <input type="checkbox" name="service" value="Optimización de Sistema - 25">
+                        Optimización de Sistema - $25
+                    </label>
+                </div>
+                <button type="button" id="sendToWhatsapp">Enviar a WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Maintec. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('sendToWhatsapp').addEventListener('click', function () {
+            const selectedServices = [];
+            const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+            
+            checkboxes.forEach(checkbox => {
+                selectedServices.push(checkbox.value);
+            });
+
+            if (selectedServices.length > 0) {
+                const message = `Hola, estoy interesado en los siguientes servicios:\n${selectedServices.join('\n')}`;
+                const whatsappNumber = "73632226"; // Reemplaza con el número de WhatsApp de tu negocio
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+                window.open(whatsappURL, '_blank');
+            } else {
+                alert('Por favor selecciona al menos un servicio.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem;
+}
+
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.service label {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Botón de enviar a WhatsApp */
+button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #25d366;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+button:hover {
+    background-color: #20b954;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #007bff;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .service label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .service label {
+        font-size: 0.9rem;
+    }
+}
