@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios MEINTEC</title>
+    <title>Servicios de Soporte de Software</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Servicios de Soporte de Software "MEINTEC"</h1>
+        <h1>Servicios de Soporte de Software</h1>
         <p>Soluciones rápidas y confiables para tu software.</p>
     </header>
 
@@ -16,30 +17,52 @@
         <section>
             <h2>Servicios Disponibles</h2>
             <form id="orderForm">
-                <div class="service">
-                    <label>
-                        <input type="checkbox" name="service" value="Mantenimiento General - 50">
-                        Mantenimiento General - $50
-                    </label>
-                </div>
-                <div class="service">
-                    <label>
-                        <input type="checkbox" name="service" value="Instalación de Software - 30">
-                        Instalación de Software - $30
-                    </label>
-                </div>
-                <div class="service">
-                    <label>
-                        <input type="checkbox" name="service" value="Resolución de Problemas - 40">
-                        Resolución de Problemas - $40
-                    </label>
-                </div>
-                <div class="service">
-                    <label>
-                        <input type="checkbox" name="service" value="Optimización de Sistema - 25">
-                        Optimización de Sistema - $25
-                    </label>
-                </div>
+                <table class="table-hover table-striped table-success">
+                    <thead>
+                        <tr>
+                            <th>Seleccionar</th>
+                            <th>Servicio</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Mantenimiento General - 50"></td>
+                            <td>Mantenimiento General</td>
+                            <td>50 bs.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Instalación de Software - 30"></td>
+                            <td>Instalación de Software</td>
+                            <td>100 bs.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Resolución de Problemas - 40"></td>
+                            <td>Instalacion de sistema operativo</td>
+                            <td>350 bs.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Optimización de Sistema - 25"></td>
+                            <td>Actualizacion de software y controladores</td>
+                            <td>145 bs.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Optimización de Sistema - 25"></td>
+                            <td>Licencia de Microsoft Oficce (activacion y configuracion) </td>
+                            <td>450 bs.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Optimización de Sistema - 25"></td>
+                            <td>Instalacion de software de Software especializado(Adobe, AutoCAD)</td>
+                            <td>500 bs.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="service" value="Optimización de Sistema - 25"></td>
+                            <td>Eliminacion de Virus y Malware</td>
+                            <td>210 bs.</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <button type="button" id="sendToWhatsapp">Enviar a WhatsApp</button>
             </form>
         </section>
@@ -59,10 +82,9 @@
             });
 
             if (selectedServices.length > 0) {
-                const message = `Hola, estoy interesado en los siguientes servicios:\n${selectedServices.join('\n')}`;
-                const whatsappNumber = "73632226"; // Reemplaza con el número de WhatsApp de tu negocio
+                const message = `Saludos "MAINTEC" , estoy interesado en los siguientes servicios:\n${selectedServices.join('\n')}`;
+                const whatsappNumber = "73632226"; 
                 const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
                 window.open(whatsappURL, '_blank');
             } else {
                 alert('Por favor selecciona al menos un servicio.');
